@@ -11,17 +11,17 @@ import vp3rw
 
 class squares:
 	def __init__(self,draw_fn):
-		self.draw=draw_fn
+		self.drawfn=draw_fn
 
 	def square1(self, cx,cy, r,i):
 		if i: 
-			self.jj.lineto(cx+r,cy+r)
+			self.drawfn.lineto(cx+r,cy+r)
 		else: 
-			self.jj.moveto(cx+r,cy+r) # only first square does "moveto"
-		self.jj.lineto(cx+r,cy-r)
-		self.jj.lineto(cx-r,cy-r)
-		self.jj.lineto(cx-r,cy+r)
-		self.jj.lineto(cx+r,cy+r)
+			self.drawfn.moveto(cx+r,cy+r) # only first square does "moveto"
+		self.drawfn.lineto(cx+r,cy-r)
+		self.drawfn.lineto(cx-r,cy-r)
+		self.drawfn.lineto(cx-r,cy+r)
+		self.drawfn.lineto(cx+r,cy+r)
 
 	def draw(self,cx,cy,r,d,cnt):
 		for i in xrange(cnt): self.square1(cx,cy,5+i*d,i)
