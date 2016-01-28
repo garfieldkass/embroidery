@@ -71,7 +71,7 @@ def decode_color(htmlcolor):  #   #rrggbb
 def n_wstr(s):
 	s1,s2=divmod(len(s)*2,256)
 	ss=chr(s1)+chr(s2)
-	for c in s: ss += chr(0) + c # h6re string, 16-bit big-endian
+	for c in s: ss += chr(0) + c # 16-bit big-endian
 	return ss
 
 def n_str(s):
@@ -354,8 +354,8 @@ class vp3:
 		s1+=self.stitches[colorindex]  # stitch-run
 		s1+=chr(0)
 
-		# thread_len=len(self.stitches[colorindex])+len(thread_description) # kas on kogu pikkus
-		thread_len=len(s1) # kas on kogu pikkus
+		# thread_len=len(self.stitches[colorindex])+len(thread_description) # is that full length ?
+		thread_len=len(s1) # is that full length ?
 		s+=int2str(thread_len,4)  # 4 bytes thread-len bytes to next thread
 		s+=s1
 		
@@ -445,7 +445,7 @@ class vp3:
 		ddy=-dy # Y negative
 		if ddx<0: ddx+=256
 		if ddy<0: ddy+=256
-		if abs(dx)+abs(dy) >= self.min_stitch_len: # eliminate too short stitches
+		if abs(dx)+abs(dy) >= self.min_stitch_len: # eliminate too short stitches (they damage fabric)
 			self.stitches[self.cnt-1]+=chr(ddx)+chr(ddy) 
 			self.stitch_time_count+=1
 			self.posx+=dx
