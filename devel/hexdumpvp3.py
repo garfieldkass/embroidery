@@ -5,7 +5,7 @@
 
 import sys
 import os.path
-import vp3io
+import vp3rw
 
 fname=sys.argv[1]
 #print "input file name is '"+fname+"'"
@@ -13,7 +13,7 @@ if fname=="":
 	sys.exit("ERR: file name not given")
 
 if os.path.isfile(fname):
-	vp3io.explain (fname)
+	vp3rw.explain (fname)
 else: 
 	sys.exit("file '"+fname+"' does not exist")
 # oname=fname+"hex"
