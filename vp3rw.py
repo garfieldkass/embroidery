@@ -1,5 +1,7 @@
 #!python
 #!/usr/bin/python
+# (c) Kalle Pungas 2014
+# licence: GPLv3
 
 import sys
 import struct
