@@ -377,7 +377,7 @@ class vp3:
 		# stitch_time_count=2001
 		
 		thread_change_count=self.cnt;
-		hoop_left=extent_left # hoop on see raam mis hoiab kinni riiet
+		hoop_left=extent_left #  hoop is the physical frame, holding the fabric
 		hoop_right=extent_right
 		hoop_top=extent_top
 		hoop_bottom=extent_bottom
@@ -387,7 +387,7 @@ class vp3:
 		self.centre_x=(extent_right+extent_left)/2
 		self.centre_y=(extent_bottom+extent_top)/2
 		
-		hoop_left=extent_left-self.centre_x # hoop on see raam mis hoiab kinni riiet
+		hoop_left=extent_left-self.centre_x # hoop is the physical frame, holding the fabric
 		hoop_right=extent_right-self.centre_x
 		hoop_top=extent_top-self.centre_y
 		hoop_bottom=extent_bottom-self.centre_y
