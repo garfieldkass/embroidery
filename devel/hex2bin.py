@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # file converter: commented hex dump to binary
+# created as reverse of hexdumpvp3.py
 # eliminates comments, any non-hexanumeric-containig word starts comment until eol
 # run this from command line
 
