@@ -3,6 +3,7 @@
 # documentation: see included index.html
 # LICENSE:
 # This code is copyright 2010 by Jon Howell,
+# added vp3 format by Kalle Pungas 2014
 # licensed under <a href="http://www.gnu.org/licenses/quick-guide-gplv3.html">GPLv3</a>.
 #
 # Important resources:
