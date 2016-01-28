@@ -453,7 +453,7 @@ class vp3:
 			self.total_displacement_x+=dx
 			self.total_displacement_y+=dy
 		
-	def minmax(self,x,y):
+	def minmax(self,x,y): # collect min,max coordinates
 		if self.posx==None:
 			self.posx=x
 			self.posy=y
