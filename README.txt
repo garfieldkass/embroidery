@@ -1,8 +1,20 @@
 embroidery
 
-inkscape embroidery vp3 output plugin based on [Jon Howell,2010] + standalone vp3 rw class.py
+inkscape embroidery vp3 output plugin based on 
+Jon Howell,2010 http://www.jonh.net/~jonh/inkscape-embroidery/
 
-to install:
++standalone vp3 rw class to easily create vp3 embroider files
+simplest usage example of vp3rw class: 
+draw=vp3rw.vp3()
+draw.setcolor("#000000")
+draw.moveto(10,10)
+draw.lineto(100,100)
+draw.lineto(100,0)
+draw.lineto(0,0)
+draw.flush("fname.vp3")
+
+
+to install inkscape plugin:
 
 linux:
   copy files: 
