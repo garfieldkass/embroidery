@@ -298,7 +298,7 @@ class vp3:
 	#prev_startx=None
 	#prev_starty=None
 	
-	def __init__(self,producer,settings):
+	def __init__(self,producer="vp3rw",settings="settings"):
 		self.producer=producer
 		self.settings=settings
 		self.posx=None
