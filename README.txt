@@ -1,14 +1,17 @@
 embroidery
 
 inkscape embroidery vp3 output plugin based on 
-  vp3 file format:
-    https://community.kde.org/Projects/Liberty/File_Formats/Viking_Pfaff
-    http://www.jasonweiler.com/VP3FileFormatInfo.html
+  standalone vp3 rw class
+    kalle pungas 2014 http://bluecatspla.net/cnc/embroider/
   inkscape embroidery plugin:
     Jon Howell,2010 http://www.jonh.net/~jonh/inkscape-embroidery/
 
 
 standalone vp3 rw class to easily create vp3 embroider files
+  vp3 file format:
+    https://community.kde.org/Projects/Liberty/File_Formats/Viking_Pfaff
+    http://www.jasonweiler.com/VP3FileFormatInfo.html
+
 simplest usage example of vp3rw class: 
 draw=vp3rw.vp3()
 draw.setcolor("#000000")
