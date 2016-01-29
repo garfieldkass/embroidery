@@ -5,12 +5,14 @@
 # run this from command line
 
 import sys
+
 def is_hex(s): # is string hexanumeric?
 	try:
 		int(s,16)
 		return True
 	except ValueError:
 		return False
+
 def hexstr2bin(s):  # convert one line
 	global lines,bytes
 	res=""
@@ -22,13 +24,17 @@ def hexstr2bin(s):  # convert one line
 				bytes+=1
 		else: return res
 	return res
+
 bytes=0
 lines=0
 fname=sys.argv[1]
 if fname=="": sys.exit("give a hexadecimal coded file name")
 oname=fname+"bin"
 o_str=""
-for line in open(fname,"rt"): o_str+=hexstr2bin(line)
-open(oname,"wb").write(o_str) # not guaranteed
+
+for line in open(fname,"rt"): o_str+=hexstr2bin(line) # main loop
+
+open(oname,"wb").write(o_str) 
+
 print "input file name is '"+fname+"'  ",lines," lines"
 print "output file: '"+oname+"'  ",bytes," bytes"
